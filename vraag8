@@ -1,0 +1,28 @@
+vraag 8 normaliseren:
+
+oplossingen:
+
+0NF: db(personnal_number, name, date_of_birth, lab_code, lab_name, research_code, research_description, reasearch_supervisor)
+1NF: 0NF, pk: personnel_number
+het is niet perse dat elke personeel in hetzelfde lab werkt of hetzelfde onderzoek doet daarom geen herhaling
+2NF: personnel(personnel_number, name, date_of_birth)
+research(personnel_number, lab_code, lab_name, reasearch code, reasearch_discription, research_supervisor)
+3NF: personell(personnel_number, name, date_of_birth)
+lab(lab_code, lab_name)
+research(research_code, research_name, research_supervisor)
+BCNF:
+personell(personnel_number, name, date_of_birth)
+lab(lab_code, lab_name)
+researchcd(research_code, research_name)
+laatste(research_name, research_supervisor)
+
+
+
+
+info:
+
+1NF: herhalingen eruit, zoeken naar primary key
+2NF: every non prime attribut is dependant on the whole key of the candidate key:
+3NF: evry non-prime attribut is non-transively depentant on evry key
+BCNF: evry attribut wher some other attribute fully depends on =stat
+stat=candidate key 
