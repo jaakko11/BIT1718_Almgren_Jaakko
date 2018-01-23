@@ -1,0 +1,9 @@
+1) select seq_region_end - seq_region_start as length, gene_name from gene order by length limit 1;
+2) select gene_name, count(transcript_id) as count from transcript join gene on gene.gene_id=transcript.gene_id group by gene_name order by count desc limit 1;
+3) select chromosome, count(gene_id) as count from gene where description like '%cancer%' group by chromosome order by count desc limit 1 offset 1;
+4) select count(*) as exon_table from exon; 642590
+select count(*) as exon_table from exon_transcript; 1178393
+because evry transcript has more exons so their is much repeating when you do this you get the sme ammount: select count(distinct(exon_id)) from exon_transcript;
+
+
+
