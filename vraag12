@@ -1,0 +1,8 @@
+vraag 12:
+1) curl 'https://rest.ensembl.org/variation/mouse/rs4224828?genotypes=1' -H 'Content-type:application/json'
+"mappings":[{"location":"4:136443949-136443949","assembly_name":"GRCm38","end":136443949,"seq_region_name":"4","strand":1,"coord_system":"chromosome","allele_string":"T/C","start":136443949}],
+
+dus de locatie is chromosoom 4 en nummer 136443949 tot 136443949
+2) curl 'https://rest.ensembl.org/sequence/region/mouse/2:26457902..26458002:1' -H 'content-type:text/x-fasta'
+opzoeken in NCBI gene en welk chromosome en wat de start locatie is is een methode die ik gebruikt heb
+
