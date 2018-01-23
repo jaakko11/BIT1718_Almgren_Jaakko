@@ -1,0 +1,6 @@
+vraag 11:
+1) 
+2) db.bioinf_mongo.find({percentage_of_side_effects:{$gt:12}}).count();
+3) db.bioinf_mongo.find({percentage_of_side_effects:{$not:{$lt:10}}}, {company:1, percentage_of_side_effects:1}).sort({percentage_of_side_effects:-1});
+4) db.bioinf_mongo.aggregate([{$group:{_id:'$company', min:{$min: '$percentage_of_side_effects'}, max:{$max:'$percentage_of_side_effects'}}}]  )
+
